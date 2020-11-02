@@ -1,0 +1,6 @@
+try_error/
+venv/
+.idea/
+*.txt
+*.json
+
