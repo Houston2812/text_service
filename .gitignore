@@ -2,5 +2,6 @@ try_error/
 venv/
 .idea/
 *.txt
+!requirements.txt
 *.json
 
