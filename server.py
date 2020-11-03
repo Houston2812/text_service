@@ -66,7 +66,23 @@ class Server():
 
 
 if __name__ == "__main__":
-    server = Server(interface="127.0.0.1", port=1060)
+    parser = argparse.ArgumentParser(description="Server for the TCP based text service")
+    parser.add_argument(
+        '-i',
+        metavar='interface',
+        default='127.0.0.1',
+        help="Interface which server listens"
+    )
+    parser.add_argument(
+        '-p',
+        metavar='port',
+        type=int,
+        default=1060,
+        help='Port of the interface, which server listens'
+    )
+    args = parser.parse_args()
+
+    server = Server(interface=args.i, port=args.p)
     server.run()
 
 
